@@ -1,0 +1,233 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ROUTE DIALOGEX 0, 0, 336, 246
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDC_CANCEL,279,225,50,14
+    DEFPUSHBUTTON   "OK",IDC_OK,221,225,50,14
+    CONTROL         "",IDC_TABCONTROL,"SysTabControl32",TCS_MULTILINE,7,7,322,213
+END
+
+IDD_ROUTE_ROUTING DIALOGEX 0, 0, 251, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Configuration",IDC_CONFIGTITLE,7,7,237,117
+    LTEXT           "Host / IP Address",IDC_STATIC,15,19,57,8
+    EDITTEXT        IDC_HOST,15,29,170,14,ES_AUTOHSCROLL
+    LTEXT           "Remote Port",IDC_STATIC,189,19,41,8
+    EDITTEXT        IDC_PORT,189,29,47,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Description",IDC_STATIC,15,48,36,8
+    EDITTEXT        IDC_IPDESCR,15,58,221,58,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Enabled?",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,133,45,10
+    DEFPUSHBUTTON   "OK",IDC_OK,137,131,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,194,131,50,14
+END
+
+IDD_ROUTE_ADVANCED DIALOGEX 0, 0, 315, 152
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Advanced Settings",IDC_STATIC,7,7,143,138
+    LTEXT           "Buffer Size",IDC_STATIC,15,17,36,8
+    EDITTEXT        IDC_BUFFERSIZE,15,27,128,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Idle Disconnect Timeout",IDC_STATIC,15,45,77,8
+    EDITTEXT        IDC_IDLETIMEOUT,15,55,128,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Orphaned Peer Timeout",IDC_STATIC,15,73,77,8
+    EDITTEXT        IDC_ORPHANTIMEOUT,15,83,128,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Persistence Time",IDC_STATIC,15,101,54,8
+    EDITTEXT        IDC_PERSISTENCETIME,15,111,128,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Auto Start?",IDC_AUTOSTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,129,53,10
+END
+
+IDD_ROUTE_ROUTINGS DIALOGEX 0, 0, 315, 194
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Routing",IDC_STATIC,7,7,301,180
+    LTEXT           "Local Port",IDC_STATIC,12,17,32,8
+    EDITTEXT        IDC_LOCALPORT,12,28,92,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Max Connections",IDC_STATIC,121,17,56,8
+    EDITTEXT        IDC_MAXCONNECTIONS,121,28,92,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Destination IPs/Hosts",IDC_STATIC,12,49,70,8
+    CONTROL         "",IDC_HOST_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,59,254,86
+    PUSHBUTTON      "Add",IDC_HOST_ADD,272,60,31,13
+    PUSHBUTTON      "Delete",IDC_HOST_DELETE,272,76,31,13
+    PUSHBUTTON      "Up",IDC_HOST_UP,272,94,31,13
+    PUSHBUTTON      "Down",IDC_HOST_DOWN,272,110,31,13
+    LTEXT           "Load Balance Method",IDC_STATIC,12,153,69,8
+    COMBOBOX        IDC_HOST_BALANCE,12,164,150,64,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Persist by Source IP?",IDC_PERSISTBYIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,166,83,10
+END
+
+IDD_ROUTE_IPBINDINGS DIALOGEX 0, 0, 315, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Local IP Binding",IDC_STATIC,7,7,301,129
+    CONTROL         "",IDC_IPADDRESSLIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,18,255,99
+    CONTROL         "Listen on all IPs?",IDC_IP_LISTENONALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,121,69,10
+    PUSHBUTTON      "Add",IDC_IP_ADD,272,18,31,13
+    PUSHBUTTON      "Delete",IDC_IP_DELETE,272,34,31,13
+    PUSHBUTTON      "Up",IDC_IP_UP,272,52,31,13
+    PUSHBUTTON      "Down",IDC_IP_DOWN,272,68,31,13
+END
+
+IDD_ROUTE_HEADERS DIALOGEX 0, 0, 315, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_HEADER_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,12,18,255,110
+    PUSHBUTTON      "Add",IDC_HEADER_ADD,272,18,31,13
+    PUSHBUTTON      "Delete",IDC_HEADER_DELETE,272,34,31,13
+    PUSHBUTTON      "Up",IDC_HEADER_UP,272,52,31,13
+    PUSHBUTTON      "Down",IDC_HEADER_DOWN,272,68,31,13
+    GROUPBOX        "HTTP Headers",-1,7,7,301,128
+END
+
+IDD_ROUTE_BASIC DIALOGEX 0, 0, 315, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Basic information",IDC_STATIC,7,7,301,128
+    LTEXT           "Name",IDC_STATIC,13,17,19,8
+    EDITTEXT        IDC_NAME,12,27,291,14,ES_AUTOHSCROLL
+    LTEXT           "Description",IDC_STATIC,13,45,36,8
+    EDITTEXT        IDC_DESCR,12,56,291,72,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ROUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_ROUTE_ROUTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_ROUTE_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_ROUTE_ROUTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_ROUTE_IPBINDINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_ROUTE_HEADERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_ROUTE_BASIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
